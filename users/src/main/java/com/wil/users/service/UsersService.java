@@ -52,14 +52,14 @@ public class UsersService {
         return bikes;
     }
     
-    public Cars saveCar(int usuarioId, Cars car){
-        car.setUserId(usuarioId);
+    public Cars saveCar(int userId, Cars car){
+        car.setUserId(userId);
         Cars newCar=carFeignClient.save(car);
         return newCar;
     }
     
-    public Bikes saveBike(int usuarioId, Bikes bike){
-        bike.setUserId(usuarioId);
+    public Bikes saveBike(int userId, Bikes bike){
+        bike.setUserId(userId);
         Bikes newbike=bikeFeignClient.save(bike);
         return newbike;
     }
