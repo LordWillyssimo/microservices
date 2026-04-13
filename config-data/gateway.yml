@@ -5,10 +5,20 @@ spring:
         webflux:
           routes:
             - id: users
-              uri: http://localhost:8081
+              #uri: http://localhost:8081
+              uri: users
               predicates:
                 - Path=/api/v1/user/**
 
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
 
 server:
   port: 8090  
