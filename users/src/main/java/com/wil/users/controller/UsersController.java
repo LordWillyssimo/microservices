@@ -68,7 +68,7 @@ public class UsersController {
         List<Bikes> bikes=userService.getBikes(userId);
         return ResponseEntity.ok(bikes);
     }
-    /*
+    
     @PostMapping("/car/{userId}")
     public ResponseEntity<Cars> saveCar(@PathVariable("userId") int userId, @RequestBody Cars car){
         Cars newCar=userService.saveCar(userId, car);
@@ -85,5 +85,5 @@ public class UsersController {
     public ResponseEntity<Map<String, Object>> listAllVehicles(@PathVariable("userId") int userId){
         Map<String,Object> result=userService.getUserAndVehicles(userId);
         return ResponseEntity.ok(result);
-    }*/
+    }
 }
