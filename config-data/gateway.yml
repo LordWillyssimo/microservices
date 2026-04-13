@@ -6,7 +6,7 @@ spring:
           routes:
             - id: users
               #uri: http://localhost:8081
-              uri: users
+              uri: lb://users
               predicates:
                 - Path=/api/v1/user/**
 
