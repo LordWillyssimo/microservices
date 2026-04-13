@@ -5,11 +5,17 @@ spring:
         webflux:
           routes:
             - id: users
-              #uri: http://localhost:8081
               uri: lb://users
               predicates:
                 - Path=/api/v1/user/**
-
+            - id: cars
+              uri: lb://cars
+              predicates:
+                - Path=/api/v1/car/**
+            - id: bikes
+              uri: lb://bikes
+              predicates:
+                - Path=/api/v1/bike/**
 
 eureka:
   client:
