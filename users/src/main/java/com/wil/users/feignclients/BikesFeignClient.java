@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 //@FeignClient(name="bikes",url="http://localhost:8083",path="/bike")
-@FeignClient(name="bikes",path="/bike")
+//@FeignClient(name="bikes",path="/bike")
 public interface BikesFeignClient {
     
-    @PostMapping()
-    public Bikes save(@RequestBody Bikes bike);
+//    @PostMapping()
+//    public Bikes save(@RequestBody Bikes bike);
     
-    @GetMapping("/user/{userId}")
-    public List<Bikes> getBikes(@PathVariable("userId") int userId);
+//    @GetMapping("/user/{userId}")
+//    public List<Bikes> getBikes(@PathVariable("userId") int userId);
 }

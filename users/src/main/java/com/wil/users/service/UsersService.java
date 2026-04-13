@@ -22,11 +22,11 @@ public class UsersService {
     @Autowired
     private UsersRepository usersRepository;
     
-    @Autowired
+   /* @Autowired
     private CarsFeignClient carFeignClient;
     
     @Autowired
-    private BikesFeignClient bikeFeignClient;
+    private BikesFeignClient bikeFeignClient;*/
     
     public List<Users> getAll() {
         return usersRepository.findAll();
@@ -52,7 +52,7 @@ public class UsersService {
         return bikes;
     }
     
-    public Cars saveCar(int userId, Cars car){
+    /*public Cars saveCar(int userId, Cars car){
         car.setUserId(userId);
         Cars newCar=carFeignClient.save(car);
         return newCar;
@@ -86,7 +86,7 @@ public class UsersService {
             result.put("Bikes", bikes);
         }
         return result;
-    }
+    }*/
 
 
 
