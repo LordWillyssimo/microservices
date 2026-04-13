@@ -1,0 +1,13 @@
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: users
+              uri: http://localhost:8081
+              predicates:
+                - Path=/api/v1/user/**
+
+
+  server:
+    port: 8090  
